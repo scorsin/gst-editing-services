@@ -159,6 +159,7 @@ struct _GESTimelineElementClass
   GInitiallyUnownedClass parent_class;
 
   /*< public > */
+  gboolean (*set_parent)       (GESTimelineElement * self, GESTimelineElement *parent);
   gboolean (*set_start)        (GESTimelineElement * self, GstClockTime start);
   gboolean (*set_inpoint)      (GESTimelineElement * self, GstClockTime inpoint);
   gboolean (*set_duration)     (GESTimelineElement * self, GstClockTime duration);
